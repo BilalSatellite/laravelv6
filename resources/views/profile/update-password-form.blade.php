@@ -33,7 +33,7 @@
     </x-slot>
 
     <x-slot name="actions">
-        <x-jet-button>
+        <x-jet-button class="btn btn-rounded btn-success">
             <div wire:loading class="spinner-border spinner-border-sm" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>

@@ -29,12 +29,12 @@
                                     reader.readAsDataURL($refs.photo.files[0]);
                             " />
 
-                <x-jet-label for="photo" value="{{ __('Photo') }}" />
+                {{-- <x-jet-label for="photo" value="{{ __('Photo') }}" /> --}}
 
                 <!-- Current Profile Photo -->
-                <div class="mt-2" x-show="! photoPreview">
+                {{-- <div class="mt-2" x-show="! photoPreview">
                     <img src="{{ $this->user->profile_photo_url }}" class="rounded-circle" height="80px" width="80px">
-                </div>
+                </div> --}}
 
                 <!-- New Profile Photo Preview -->
                 <div class="mt-2" x-show="photoPreview">
@@ -44,7 +44,7 @@
                 <x-jet-secondary-button class="mt-2 me-2" type="button" x-on:click.prevent="$refs.photo.click()">
                     {{ __('Select A New Photo') }}
 				</x-jet-secondary-button>
-				
+
 				@if ($this->user->profile_photo_path)
                     <x-jet-secondary-button type="button" class="mt-2" wire:click="deleteProfilePhoto">
                         <div wire:loading wire:target="deleteProfilePhoto" class="spinner-border spinner-border-sm" role="status">
@@ -58,7 +58,7 @@
                 <x-jet-input-error for="photo" class="mt-2" />
             </div>
         @endif
-
+        <x-jet-section-border />
         <div class="w-md-75">
             <!-- Name -->
             <div class="mb-3">
@@ -78,7 +78,7 @@
 
     <x-slot name="actions">
 		<div class="d-flex align-items-baseline">
-			<x-jet-button>
+			<x-jet-button class="btn btn-rounded btn-success">
                 <div wire:loading class="spinner-border spinner-border-sm" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>

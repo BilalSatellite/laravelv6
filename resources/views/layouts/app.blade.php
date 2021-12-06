@@ -7,10 +7,10 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-       
+
 
         <!-- Styles -->
-        {{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> --}}
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
          <!-- Panel Styles -->
      <link rel="stylesheet" href="{{ mix('css/panel/app.css') }}">
 	 <link rel="stylesheet" href="{{ asset('css/panel/vendor.css') }}">
@@ -18,7 +18,7 @@
         @livewireStyles
 
         <!-- Scripts -->
-        {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
+        <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     {{-- <body class="font-sans antialiased bg-light">
         <x-jet-banner />
@@ -43,7 +43,7 @@
         @stack('scripts')
     </body> --}}
     <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
-	
+
         <div class="wrapper">
          <!-- Header -->
           <x-panel.mainHeader/>
@@ -58,7 +58,7 @@
                         <div class="d-flex align-items-center">
                             <div class="mr-auto">
                                 <h3 class="page-title">{{ $header }}</h3>
-                                
+
                                 <div class="d-inline-block align-items-center">
                                     <nav>
                                         <ol class="breadcrumb">
@@ -71,8 +71,8 @@
                         </div>
                     </div>
                   @endisset
-                  
-                  
+
+
                 <!-- Main content -->
                 {{ $slot }}
                 <!-- /.content -->
@@ -82,10 +82,10 @@
           <x-panel.footer/>
         </div>
         <!-- ./wrapper -->
-              
-             
-            
-            
+
+
+
+
         <!-- Scripts -->
         <script src="{{ asset('js/panel/vendors.min.js') }}" ></script>
         <script src="{{ asset('assets/icons/feather-icons/feather.min.js') }}" ></script>

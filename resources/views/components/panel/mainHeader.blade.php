@@ -13,7 +13,7 @@
                 <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link rounded svg-bt-icon" title="Full Screen">
                     <i class="nav-link-icon mdi mdi-crop-free"></i>
                 </a>
-            </li>			
+            </li>
             <li class="btn-group nav-item d-none d-xl-inline-block">
                 <a href="#" class="waves-effect waves-light nav-link rounded svg-bt-icon" title="">
                     <i class="ti-check-box"></i>
@@ -26,15 +26,15 @@
             </li>
           </ul>
       </div>
-        
+
       <div class="navbar-custom-menu r-side">
         <ul class="nav navbar-nav">
           <!-- full Screen -->
-          <li class="search-bar">		  
+          <li class="search-bar">
               <div class="lookup lookup-circle lookup-right">
                  <input type="text" name="s">
               </div>
-          </li>			
+          </li>
           <!-- Notifications -->
           <li class="dropdown notifications-menu">
             <a href="#" class="waves-effect waves-light rounded dropdown-toggle" data-toggle="dropdown" title="Notifications">
@@ -85,7 +85,7 @@
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-user text-primary"></i> Nunc fringilla lorem 
+                      <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
                     </a>
                   </li>
                   <li>
@@ -99,12 +99,12 @@
                   <a href="#">View all</a>
               </li>
             </ul>
-          </li>	
-          
+          </li>
+
           <!-- User Account-->
-          <li class="dropdown user user-menu">	
-            <a href="#" class="waves-effect waves-light rounded dropdown-toggle p-0" data-toggle="dropdown" title="User">
-                <img src="../images/avatar/1.jpg" alt="">
+          <li class="dropdown user user-menu">
+            <a href="#" class="waves-effect waves-light rounded dropdown-toggle p-0" data-toggle="dropdown" title="Hi,{{ auth()->user()->name }}">
+                <img src="{{ auth()->user()->profile_photo_url }}" alt="{{ auth()->user()->name }}">
             </a>
             <ul class="dropdown-menu animated flipInX">
               <li class="user-body">
@@ -119,9 +119,9 @@
                   </form>
               </li>
             </ul>
-          </li>	
-         
-           
+          </li>
+
+
         </ul>
       </div>
     </nav>
