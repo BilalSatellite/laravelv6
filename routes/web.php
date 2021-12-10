@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Panel\Admin\ArtisanGui;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('artisangui',ArtisanGui::class)->name('Artisan');
