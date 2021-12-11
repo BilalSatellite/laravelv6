@@ -10,6 +10,13 @@ class ArtisanGui extends Component
 
     public $command;
     public $name;
+    public $option='--resource';
+
+    public $commands=[
+        'make:controller',
+        'make:model'
+
+    ];
 
 
     // public function mount(){
@@ -17,9 +24,14 @@ class ArtisanGui extends Component
     // }
     // call($command, array $parameters = [], $outputBuffer = null);
 
+
+
     public function run(){
+    //   dd($command);
+
        Artisan::call($this->command,[
            'name'=> $this->name,
+           '--resource'=> $this->option,
        ]);
 
     }
