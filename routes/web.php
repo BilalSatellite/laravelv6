@@ -22,4 +22,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('artisangui',ArtisanGui::class)->name('Artisan');
+// Route::get('artisangui',ArtisanGui::class);
+// Route::get('/artisangui', ArtisanGui::class)->name('artisangui');
+
+Route::get('/artisangui', function () {
+    return view('artisan');
+});

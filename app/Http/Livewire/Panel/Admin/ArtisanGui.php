@@ -10,30 +10,34 @@ class ArtisanGui extends Component
 
     public $command;
     public $name;
-    public $option='--resource';
+    public $option= false;
+    
 
-    public $commands=[
-        'make:controller',
-        'make:model'
+   
 
+    protected $rules = [
+        'name' => 'required',
+        
     ];
 
+    public function makecontroller(){
+        $this->validate();
+        Artisan::call('make:controller',[
+           'name'=> $this->name.'Controller',
+           '--resource'=> $this->option,
+       ]);
 
-    // public function mount(){
-    //     return $this->message;
-    // }
-    // call($command, array $parameters = [], $outputBuffer = null);
+       $this->reset(['command', 'name','option']);
+    }
 
-
-
-    public function run(){
-    //   dd($command);
-
-       Artisan::call($this->command,[
+    public function makemodel(){
+        $this->validate();
+        Artisan::call('make:modle',[
            'name'=> $this->name,
            '--resource'=> $this->option,
        ]);
 
+       $this->reset(['command', 'name','option']);
     }
 
     public function render()
